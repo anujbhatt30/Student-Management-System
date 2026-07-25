@@ -90,7 +90,7 @@ Relationships between these tables are represented in the ER Diagram.
 
 # 📊 ER Diagram
 
-![ER Diagram](SQL\ER_Diagram.png)
+![ER Diagram](SQL\Er_Diagram.png)
 
 ---
 
