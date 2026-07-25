@@ -90,7 +90,7 @@ Relationships between these tables are represented in the ER Diagram.
 
 # 📊 ER Diagram
 
-![ER Diagram](Images/ER_Diagram.png)
+![ER Diagram](SQL\ER_Diagram.png)
 
 ---
 
@@ -99,7 +99,7 @@ Relationships between these tables are represented in the ER Diagram.
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/student-management-system.git
+git clone https://github.com/anujbhatt30/student-management-system.git
 ```
 
 ---
