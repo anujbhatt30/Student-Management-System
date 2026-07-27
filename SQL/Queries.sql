@@ -72,7 +72,7 @@ SELECT
     s.student_id,
     s.name,
     c.course_name,
-    (assignment_marks + midterm_marks + finalterm_marks) AS TotalMarks, -- CASE is a conditional statement in SQL used to implement if-else logic. 
+    (assignment_marks + midterm_marks + finalterm_marks) AS TotalMarks, 
     CASE
         WHEN (assignment_marks + midterm_marks + finalterm_marks) >= 90 THEN 'A'
         WHEN (assignment_marks + midterm_marks + finalterm_marks) >= 75 THEN 'B'
@@ -101,14 +101,14 @@ FROM
         JOIN
     Course C ON m.course_id = c.course_id
 WHERE
-    (m.assignment_marks + midterm_marks + finalterm_marks) >= 90; -- WHERE filters individual rows before grouping. Since we are checking each student's total marks record, WHERE is appropriate 
+    (m.assignment_marks + midterm_marks + finalterm_marks) >= 90;
        
        
        
        
 -- 7: Number of Students in Each Course:-
 SELECT 
-    c.course_name, COUNT(e.student_id) TotalStudent -- COUNT() is an aggregate function used to count the number of rows in a group 
+    c.course_name, COUNT(e.student_id) TotalStudent 
 FROM
     Course C
         JOIN
@@ -124,7 +124,7 @@ ORDER BY TotalStudent DESC;
 SELECT 
     s.student_id,
     s.name,
-    MAX(m.assignment_marks + midterm_marks + finalterm_marks) AS HighestMarks -- MAX() is an aggregate function that returns the largest value in a group 
+    MAX(m.assignment_marks + midterm_marks + finalterm_marks) AS HighestMarks 
 FROM
     Student S
         JOIN
@@ -134,7 +134,7 @@ ORDER BY HighestMarks DESC
 LIMIT 1;
 
 
--- 9: Display the course names where the number of enrolled students is greater than the average number of students enrolled across all courses.
+-- 9: Display the course names where the number of enrolled students is greater than the average number of students enrolled across all courses:--
 SELECT 
     c.course_name, COUNT(e.enrollment_id) AS Student_count
 FROM
