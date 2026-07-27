@@ -134,7 +134,22 @@ ORDER BY HighestMarks DESC
 LIMIT 1;
 
 
-
+-- 9: Display the course names where the number of enrolled students is greater than the average number of students enrolled across all courses.
+SELECT 
+    c.course_name, COUNT(e.enrollment_id) AS Student_count
+FROM
+    enrollment e
+        JOIN
+    course c ON e.course_id = c.course_id
+GROUP BY c.course_name , c.course_name
+HAVING COUNT(e.enrollment_id) > (SELECT 
+        AVG(Total)
+    FROM
+        (SELECT 
+            COUNT(enrollment_id) AS Total
+        FROM
+            enrollment
+        GROUP BY course_id) t);
 
 
 
