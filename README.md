@@ -75,6 +75,70 @@ Student-Management-System/
 
 ---
 
+## Workflow
+
+                ┌────────────────────────────┐
+                │  Project Planning          │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Design Database Schema     │
+                │ (Students, Courses,        │
+                │ Enrollments, Marks)        │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Generate Sample Data       │
+                │ (Python + Faker + Random)  │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Store Data in MySQL        │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Develop GUI using Tkinter  │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Connect Python with MySQL  │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Implement CRUD Operations  │
+                │ • Add Student              │
+                │ • View Records             │
+                │ • Update Records           │
+                │ • Delete Records           │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Execute SQL Queries        │
+                │ • JOINs                    │
+                │ • Aggregate Functions      │
+                │ • Subqueries               │
+                │ • Window Functions         │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ Generate Reports &         │
+                │ Analyze Student Data       │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+                ┌────────────────────────────┐
+                │ End                        │
+                └────────────────────────────┘
+
+---
 # 🗄 Database Schema
 
 The project consists of four relational tables:
