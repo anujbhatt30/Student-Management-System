@@ -28,6 +28,14 @@ This project includes both a **Console Version** and a **GUI Version**, allowing
 - Add / Update / Delete Students
 - Database Connectivity
 - Interactive Buttons and Forms
+---
+
+**What the GUI is used for:**
+- Adding new students, courses, enrollments, and marks through forms
+- Viewing student lists, course rosters, and marks in a table/grid format
+- Searching and filtering (e.g., by student ID, name, or course)
+- Performing CRUD operations via button clicks instead of raw SQL
+- Providing immediate visual feedback (confirmations, error messages)
 
 ---
 
@@ -72,6 +80,17 @@ Student-Management-System/
 ├── README.md
 └── LICENSE
 ```
+---
+## 🔹 Database Structure
+
+The system uses four interconnected tables:
+
+| Table | Description |
+|---|---|
+| 👨‍🎓 **Students** | Stores student personal and academic details |
+| 📚 **Courses** | Stores course details offered by the institution |
+| 📝 **Enrollment** | Maps students to the courses they're enrolled in |
+| 📊 **Marks** | Stores performance/marks data per student, per course |
 
 ---
 
@@ -297,6 +316,24 @@ python GUI_Version/main.py
 - Foreign Key
 
 ---
+## 📊 Sample Queries
+
+```sql
+-- Get all marks for a student across enrolled courses
+SELECT s.name, c.course_name, m.marks
+FROM Students s
+JOIN Enrollment e ON s.student_id = e.student_id
+JOIN Courses c ON e.course_id = c.course_id
+JOIN Marks m ON m.enrollment_id = e.enrollment_id
+WHERE s.student_id = 1;
+
+-- Count of students enrolled per course
+SELECT c.course_name, COUNT(e.student_id) AS total_students
+FROM Courses c
+LEFT JOIN Enrollment e ON c.course_id = e.course_id
+GROUP BY c.course_name;
+```
+---
 
 # 🐍 Python Concepts Used
 
@@ -324,6 +361,9 @@ python GUI_Version/main.py
 - Search by City
 - Data Visualization
 - REST API Integration
+- Add authentication/login for admin access
+- Export reports (PDF/Excel) for student performance
+- Add data visualization (charts for grade distribution, enrollment trends)
 
 ---
 
