@@ -1,8 +1,8 @@
 # 🎓 Student Management System (Python + MySQL)
 
-A simple, easy-to-run Student Management System with both a console interface and a Tkinter GUI. Built with Python and MySQL to demonstrate database connectivity, CRUD operations, SQL joins, and basic reporting.
+A simple, easy-to-run Student Management System with both a console interface and a Tkinter GUI. Built with Python and MySQL to demonstrate database connectivity, CRUD operations, SQL joins, and basic GUI design.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) [![Repo Stars](https://img.shields.io/github/stars/anujbhatt30/Student-Management-System?style=social)](https://github.com/anujbhatt30/Student-Management-System/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) [![Repo Stars](https://img.shields.io/badge/stars-—-lightgrey)]()
 
 
 ---
@@ -13,6 +13,7 @@ A simple, easy-to-run Student Management System with both a console interface an
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
+- [ER Diagram](#-er-diagram)
 - [Screenshots](#screenshots)
 - [Prerequisites](#prerequisites)
 - [Setup & Installation](#setup--installation)
@@ -83,6 +84,12 @@ Student-Management-System/
 ├── README.md
 └── LICENSE
 ```
+
+---
+
+# 📊 ER Diagram
+
+![ER Diagram](SQL/ER_Diagram.png)
 
 > Note: Image paths in this README reference the files in the repository. If any screenshot appears broken on GitHub, confirm the file path and casing.
 
