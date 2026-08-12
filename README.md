@@ -91,7 +91,6 @@ Student-Management-System/
 
 ![ER Diagram](SQL/ER_Diagram.png)
 
-> Note: Image paths in this README reference the files in the repository. If any screenshot appears broken on GitHub, confirm the file path and casing.
 
 ---
 
@@ -230,17 +229,6 @@ FROM Courses c
 LEFT JOIN Enrollment e ON c.course_id = e.course_id
 GROUP BY c.course_name;
 ```
-
----
-
-## Troubleshooting
-
-- "Access denied for user": confirm DB user/password and host/port. Try connecting with the mysql CLI first.
-- "ModuleNotFoundError: mysql.connector": activate your venv and install requirements.
-- Broken screenshots: check file names and casing (GitHub is case-sensitive).
-
-If you find other issues when running the app, open an issue with the exact error and steps to reproduce.
-
 ---
 
 ## Future Improvements (Ideas)
@@ -267,6 +255,3 @@ Contributions are welcome! Feel free to open issues or submit pull requests. For
 
 ---
 
-If you'd like, I can also:
-- open a PR with this README update, or
-- add a CONTRIBUTING.md and a sample .env loader to the repo.
