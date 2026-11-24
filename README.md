@@ -1,13 +1,15 @@
 # 🎓 Student Management System (Python + MySQL)
 
-A complete **Student Management System** developed using **Python** and **MySQL** that demonstrates database connectivity, CRUD operations, SQL joins, and a user-friendly interface.
+A simple, easy-to-run Student Management System with both a console interface and a Tkinter GUI. Built with Python and MySQL to demonstrate database connectivity, CRUD operations, SQL joins, and basic GUI design.
 
-This project includes both a **Console Version** and a **GUI Version**, allowing users to manage student records efficiently.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) [![Repo Stars](https://img.shields.io/badge/stars-—-lightgrey)]()
+
 
 ---
 
-# 📌 Features
+## Table of Contents
 
+<<<<<<< HEAD
 ## Console Version
 
 - View Students
@@ -37,138 +39,83 @@ This project includes both a **Console Version** and a **GUI Version**, allowing
 - Searching and filtering (e.g., by student ID, name, or course)
 - Performing CRUD operations via button clicks instead of raw SQL
 - Providing immediate visual feedback (confirmations, error messages)
+=======
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [ER Diagram](#-er-diagram)
+- [Screenshots](#screenshots)
+- [Prerequisites](#prerequisites)
+- [Setup & Installation](#setup--installation)
+- [Database Setup](#database-setup)
+- [Run the Project](#run-the-project)
+- [Sample Queries](#sample-queries)
+- [Troubleshooting](#troubleshooting)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [Author](#author)
+>>>>>>> db9d6f9dd0ff96f9b2838be1dc7f7c2fe299fe2f
 
 ---
 
-# 🛠 Technologies Used
+## About
 
-- Python 3.13
-- MySQL
-- MySQL Connector (mysql-connector-python)
-- SQL
-- Tkinter *(GUI Version)*
-- VS Code
-- Git & GitHub
+This repository contains a Student Management System with two interfaces:
+
+- Console (menu-driven) version for quick CLI usage.
+- GUI version implemented with Tkinter for an interactive experience.
+
+Use it to learn how Python connects to MySQL, how to structure simple CRUD applications, and how to build a basic GUI for database-driven apps.
 
 ---
 
-# 📂 Project Structure
+## Features
+
+- View, add, update, and delete student records
+- View courses and enroll students
+- Student course reports and marks
+- Search students by ID/name (search-by-name planned)
+- Console and GUI interfaces
+- Sample data generation included in the SQL setup
+
+---
+
+## Tech Stack
+
+- Python 3.10+ (tested on 3.13)
+- MySQL 8.x
+- mysql-connector-python
+- Tkinter (for GUI)
+- VS Code for development
+
+---
+
+## Project Structure
 
 ```
 Student-Management-System/
-│
 ├── SQL/
 │   ├── student_management_setup.sql
 │   ├── queries.sql
 │   └── ER_Diagram.png
-│
 ├── Console_Version/
-│   └── main.py
-│
+│   ├── main.py
+│   └── Images/Console_Menu.png
 ├── GUI_Version/
-│   └── main.py
-│
+│   ├── main.py
+│   └── Images/
 ├── Images/
 │   ├── Menu.png
 │   ├── GUI_Home.png
-│   ├── Add_Student.png
-│   ├── Search_Student.png
-│   ├── Update_Student.png
-│   ├── Delete_Student.png
-│   └── Student_Report.png
-│
+│   ├── GUI_Add_Student.png
+│   ├── GUI_Update_Student.png
+│   ├── GUI_Delete_Student.png
+│   └── GUI_Report.png
 ├── requirements.txt
 ├── README.md
 └── LICENSE
 ```
----
-## 🔹 Database Structure
-
-The system uses four interconnected tables:
-
-| Table | Description |
-|---|---|
-| 👨‍🎓 **Students** | Stores student personal and academic details |
-| 📚 **Courses** | Stores course details offered by the institution |
-| 📝 **Enrollment** | Maps students to the courses they're enrolled in |
-| 📊 **Marks** | Stores performance/marks data per student, per course |
-
----
-
-## Workflow
-
-                ┌────────────────────────────┐
-                │  Project Planning          │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Design Database Schema     │
-                │ (Students, Courses,        │
-                │ Enrollments, Marks)        │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Generate Sample Data       │
-                │ (Python + Faker + Random)  │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Store Data in MySQL        │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Develop GUI using Tkinter  │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Connect Python with MySQL  │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Implement CRUD Operations  │
-                │ • Add Student              │
-                │ • View Records             │
-                │ • Update Records           │
-                │ • Delete Records           │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Execute SQL Queries        │
-                │ • JOINs                    │
-                │ • Aggregate Functions      │
-                │ • Subqueries               │
-                │ • Window Functions         │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ Generate Reports &         │
-                │ Analyze Student Data       │
-                └────────────┬───────────────┘
-                             │
-                             ▼
-                ┌────────────────────────────┐
-                │ End                        │
-                └────────────────────────────┘
-
----
-# 🗄 Database Schema
-
-The project consists of four relational tables:
-
-- Student
-- Course
-- Enrollment
-- Marks
-
-Relationships between these tables are represented in the ER Diagram.
 
 ---
 
@@ -176,27 +123,71 @@ Relationships between these tables are represented in the ER Diagram.
 
 ![ER Diagram](SQL/ER_Diagram.png)
 
+
 ---
 
-# ⚙️ Installation
+## Screenshots
 
-## Clone the Repository
+Console Menu
+
+![Console Menu](Images/Menu.png)
+
+GUI Home
+
+![GUI Home](Images/GUI_Home.png)
+
+Add Student
+
+![Add Student](Images/GUI_Add_Student.png)
+
+Update Student
+
+![Update Student](Images/GUI_Update_Student.png)
+
+Delete Student
+
+![Delete Student](Images/GUI_Delete_Student.png)
+
+Student Course Report
+
+![Student Report](Images/GUI_Report.png)
+
+---
+
+## Prerequisites
+
+- Python 3.10 or newer (3.13 tested)
+- MySQL server (8.x recommended)
+- git
+
+---
+
+## Setup & Installation
+
+1. Clone the repository
 
 ```bash
-git clone https://github.com/anujbhatt30/student-management-system.git
+git clone https://github.com/anujbhatt30/Student-Management-System.git
+cd Student-Management-System
 ```
 
----
+2. Create and activate a virtual environment
 
-## Navigate into the Project
+Linux / macOS
 
 ```bash
-cd student-management-system
+python3 -m venv venv
+source venv/bin/activate
 ```
 
----
+Windows (PowerShell)
 
-## Install Dependencies
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -204,34 +195,48 @@ pip install -r requirements.txt
 
 ---
 
-## Create the Database
+## Database Setup
 
-Open MySQL Workbench and execute
+Create the database and sample data using the provided SQL file.
+
+Using MySQL CLI
+
+```bash
+mysql -u <your_db_user> -p < SQL/student_management_setup.sql
+```
+
+Or open `SQL/student_management_setup.sql` in MySQL Workbench and run the script.
+
+The SQL script creates:
+- Database `student_management` (or the configured name inside the script)
+- Tables: Students, Courses, Enrollment, Marks
+- Sample data for testing
+
+### Database credentials / configuration
+
+To avoid hard-coding credentials, create a `.env` file at the project root (this repo does not currently include one):
 
 ```
-SQL/student_management_setup.sql
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=your_password
+DB_NAME=student_management
 ```
 
-This will create
-
-- Database
-- Tables
-- Relationships
-- Sample Data
+Update the database connection code (Console_Version/main.py and GUI_Version/main.py) to read these environment variables or pass credentials directly for testing.
 
 ---
 
-# ▶️ Run the Project
+## Run the Project
 
-## Console Version
+Console version
 
 ```bash
 python Console_Version/main.py
 ```
 
----
-
-## GUI Version
+GUI version
 
 ```bash
 python GUI_Version/main.py
@@ -239,85 +244,7 @@ python GUI_Version/main.py
 
 ---
 
-# 💻 Console Features
-
-- View Students
-- View Courses
-- Search Student
-- Add Student
-- Update Student
-- Delete Student
-- Student Course Report
-
----
-
-# 🖥 GUI Features
-
-- Student Dashboard
-- Add Student Form
-- Update Student Form
-- Delete Student
-- Search Student
-- View Student Records
-- Course Report
-
----
-
-# 📷 Screenshots
-
-## Console Menu
-
-![Console Menu Screenshot](Console_Version/Images/Console_Menu.png)
-
----
-
-## GUI Home
-
-![GUI Home](Images/GUI_Home.png)
-
----
-
-## Add Student
-
-![GUI Add Student](Images/GUI_Add_Student.png)
-
----
-
-## Update Student
-
-![GUI Update Student](Images/GUI_Update_Student.png)
-
----
-
-## Delete Student
-
-![GUI Delete Student](Images/GUI_Delete_Student.png)
-
----
-
-## Student Course Report
-
-![GUI Report](Images/GUI_Report.png)
-
----
-
-# 📚 SQL Concepts Used
-
-- SELECT
-- INSERT
-- UPDATE
-- DELETE
-- INNER JOIN
-- GROUP BY
-- ORDER BY
-- Aggregate Functions
-- CASE Statement
-- Parameterized Queries
-- Primary Key
-- Foreign Key
-
----
-## 📊 Sample Queries
+## Sample Queries
 
 ```sql
 -- Get all marks for a student across enrolled courses
@@ -336,46 +263,27 @@ GROUP BY c.course_name;
 ```
 ---
 
-# 🐍 Python Concepts Used
+## Future Improvements (Ideas)
 
-- Functions
-- Loops
-- Conditional Statements
-- MySQL Connector
-- Cursor Object
-- CRUD Operations
-- Exception Handling
-- User Input
-- GUI Programming (Tkinter)
+- User authentication for admin access
+- Password hashing & encryption
+- Attendance management
+- Student performance dashboard and charts
+- Export reports to Excel / PDF
+- REST API layer
+- Add unit tests and CI
 
 ---
 
-# 🚀 Future Improvements
+## Contributing
 
-- User Login Authentication
-- Password Encryption
-- Attendance Management
-- Student Performance Dashboard
-- Export Data to Excel
-- PDF Report Generation
-- Search by Name
-- Search by City
-- Data Visualization
-- REST API Integration
-- Add authentication/login for admin access
-- Export reports (PDF/Excel) for student performance
-- Add data visualization (charts for grade distribution, enrollment trends)
+Contributions are welcome! Feel free to open issues or submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-# 👨‍💻 Author
+## Author
 
 **Anuj Bhatt**
 
 ---
 
-# ⭐ If you found this project useful
-
-Please consider giving this repository a **Star ⭐**
-
-It helps support the project and motivates future improvements.
