@@ -18,6 +18,7 @@ This project includes both a **Console Version** and a **GUI Version**, allowing
 - Delete Student
 - Student Course Report
 - Menu Driven Interface
+---
 
 ## GUI Version
 
